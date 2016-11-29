@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header {
@@ -48,4 +49,39 @@ body {
   font-size: 1.4em;
   font-weight: 300;
   color: #cccccc;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.landing__graphic {
+  width: 80%;
+}
+
+.downArrow {
+  animation: ArrowBounce .8s ease-in-out infinite;
+}
+
+@keyframes ArrowBounce {
+  0% {
+    transform: translateY(0);
+    transform-origin: center;
+  }
+  50% {
+    transform: translateY(-.75em);
+    transform-origin: center;
+  }
+  100% {
+    transform: translateY(0);
+    transform-origin: center;
+  }
 }
